@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1132d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101322",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer" data-icon="arrow_back">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Setup Guide</h2>
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-end" data-icon="help">
+<span class="material-symbols-outlined text-slate-400">help_outline</span>
+</div>
+</div>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Hero Header -->
+<div class="flex p-4 @container">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="flex gap-6 flex-col items-center">
+<div class="flex items-center justify-center gap-4">
+<div class="bg-primary/20 p-4 rounded-xl flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-5xl">terminal</span>
+</div>
+<span class="material-symbols-outlined text-slate-400">add</span>
+<div class="bg-primary/20 p-4 rounded-xl flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-5xl">auto_awesome</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center max-w-lg">
+<p class="text-slate-900 dark:text-slate-100 text-[26px] font-bold leading-tight tracking-[-0.015em] text-center">Configuring OpenCode + Gemini</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal text-center mt-2">Follow these steps to integrate your development environment with Gemini AI for intelligent code completion and refactoring.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Steps Content -->
+<main class="flex-1 max-w-2xl mx-auto w-full px-4 py-8">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Install OpenCode CLI</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed pb-4">First, you need to install the OpenCode command-line interface to manage your development workflows.</p>
+<div class="relative group">
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto border border-slate-700">
+<div class="flex justify-between items-center mb-2">
+<span class="text-slate-500 text-xs">Terminal</span>
+<span class="material-symbols-outlined text-slate-500 text-sm cursor-pointer hover:text-white">content_copy</span>
+</div>
+<code class="block">npm install -g @opencode/cli</code>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-[-0.015em]">Authenticate with Gemini</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed pb-4">Log in to your Gemini account to generate an API key and connect your local environment.</p>
+<div class="relative group">
+<div class="bg-slate-900 rounded-lg p-4 font-mono text-sm text-slate-300 overflow-x-auto border border-slate-700">
+<div class="flex justify-between items-center mb-2">
+<span class="text-slate-500 text-xs">Terminal</span>
+<span class="material-symbols-outlined text-slate-500 text-sm cursor-pointer hover:text-white">content_copy</span>
+</div>
+<code class="block">opencode auth login --provider gemini</code>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-4 flex gap-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<div>
+<h4 class="text-primary font-bold text-sm">System Requirements</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Ensure you have Node.js 18.x or higher installed on your machine before proceeding with the CLI installation.</p>
+</div>
+</div>
+</main>
+<!-- Footer Action -->
+<div class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 p-4">
+<div class="max-w-2xl mx-auto flex gap-4">
+<button class="flex-1 px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    Save Draft
+                </button>
+<button class="flex-[2] bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-colors">
+                    Continue to Next Step
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

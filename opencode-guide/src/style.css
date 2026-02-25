@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Parágrafos de corpo */
+  p {
+    @apply text-lg text-slate-300 leading-relaxed mb-4;
+  }
+
+  /* Listas não ordenadas e ordenadas */
+  ul, ol {
+    @apply text-lg text-slate-300 leading-relaxed pl-6 mb-4;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  /* Texto em negrito/destaque */
+  strong {
+    @apply font-semibold text-emerald-300;
+  }
+
+  /* Links no meio do texto */
+  a {
+    @apply text-emerald-400 underline hover:text-emerald-300;
+  }
+
+  /* Código inline */
+  code {
+    @apply font-mono bg-slate-800 text-emerald-300 px-1 py-0.5 rounded;
+  }
+}
